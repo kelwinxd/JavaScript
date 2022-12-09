@@ -1,0 +1,101 @@
+* {
+    margin: 0 auto ;
+}
+
+
+header {
+    
+    background-color: #004470;
+    height: 3rem;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "sch grid";
+
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    margin-top: 1rem;
+  
+ 
+
+  
+}
+
+header ul li a {
+    line-height: 1,5rem;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    padding: 30px;
+    
+
+}
+
+.form {
+   margin-right: 50px; 
+}
+
+
+body {
+
+width: 1920px;
+background-color: gray;
+
+
+}
+.change {
+ text-align: center;
+margin: 50px
+}
+
+
+
+.cel {
+    width: 350px;
+    background-color: brown;
+    
+
+}
+
+.hd {
+  height: 8rem;
+}
+
+.ul {
+    display: block;
+    text-align: center;
+}
+
+
+
+@media screen and (width: 350px ) {
+    header ul li a {
+        line-height: 1,5rem;
+        text-decoration: none;
+        color: white;
+        margin-right: 20px;
+        padding: 30px;
+        
+    
+    }
+
+    header {
+    
+        background-color: black;
+        height: 3rem;
+        display:grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: "sch grid";
+    
+    }
+}
+
+
+
+
+
+
+
