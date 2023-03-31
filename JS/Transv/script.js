@@ -1,4 +1,4 @@
-/*const Faq = document.querySelector('#faq')
+const Faq1 = document.querySelector('#faq')
 const faqTitle = Faq.querySelector('.titulo')
 
 const DescAni = document.querySelector('.animais-descricao')
@@ -16,24 +16,23 @@ Faq.insertBefore(Esquilo, faqTitle)
 
 Faq.replaceChild(Mapa, faqTitle)
 
-
-
-
-
 console.log(faqTitle)
 
-*/
 
-// Double the menu in copy
+
+// How to double a item without moving it
 
 const Menu = document.querySelector('.menu');
 const Copy = document.querySelector('.copy');
 
-const CloneMenu = Menu.cloneNode(true);
-
-console.log(CloneMenu)
+const CloneMenu = Menu.cloneNode(true)
 
 Copy.appendChild(CloneMenu)
+
+
+
+
+//Replace Faq to Animais
 
 const Faq = document.querySelector('.faq')
 const animais = document.querySelector('.animais')
