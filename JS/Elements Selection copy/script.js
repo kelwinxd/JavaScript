@@ -1,3 +1,6 @@
+
+function hideandShow(){
+
 const links = document.querySelectorAll('a[href^="#"]')
 
 
@@ -41,5 +44,22 @@ function Tclick(event){
 }
 
 window.addEventListener('keydown', Tclick)
+}
+hideandShow();
+
+const Faq = document.querySelectorAll('.js-acordion dt')
+
+
+function addAcord(){
+    console.log(this)
+    
+    item.classList.add('ativo2')
+    this.nextElementSibling.classList.add('ativo2')
+
+}
+
+Faq.forEach((item) => {
+   item.addEventListener('click', addAcord)
+})
 
 
