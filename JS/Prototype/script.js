@@ -54,11 +54,11 @@ const li = document.querySelector('li');
 
 li; // HTMLLIELEMENT
 li.click; // Function
-li.innerText;
-li.value;
-li.hidden;
-li.offsetLeft;
-li.click();
+li.innerText; // String
+li.value; 
+li.hidden; // Boolean
+li.offsetLeft; // Number
+li.click(); // Undefined
 
 // Qual o construtor do dado abaixo:
 li.hidden.constructor.name;
