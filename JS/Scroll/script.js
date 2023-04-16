@@ -24,7 +24,8 @@ function EffectAP(){
 EffectAP();
 
 
-const Faq = document.querySelectorAll('.js-acord dt');
+function Acorddion1(){
+  const Faq = document.querySelectorAll('.js-acord dt');
 
 
 
@@ -45,4 +46,35 @@ Faq.forEach((item) => {
 
 
 }
+}
+
+
+Acorddion1();
+
+
+function initScrollSuave() {
+ const Menu = document.querySelectorAll('.js-menu a[href^="#"]')
+
+ function scrollS(event){
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute('href')
+    const section = document.querySelector(href)
+    console.log(section)
+
+    section.scrollIntoView({
+      behavior:'smooth',
+      block: 'start'
+    })
+ }
+
+
+ Menu.forEach((link) => {
+  link.addEventListener('click', scrollS )
+ })
+
+
+}
+initScrollSuave();
+
+
 
