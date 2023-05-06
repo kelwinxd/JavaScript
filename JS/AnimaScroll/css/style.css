@@ -235,7 +235,12 @@ body {
   display: none;
 }
 
+.js-accordion dt:hover{
+  cursor: pointer;
+}
+
 .js-accordion dt::after {
+  
   content: '⬎';
   margin-left: 10px;
 }

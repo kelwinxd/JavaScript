@@ -86,7 +86,7 @@ item.addEventListener('scroll', scrollAction)
 
 
 
- /*function initAnimacaoScroll() {
+ function initAnimacaoScroll() {
   const sections = document.querySelectorAll('.js-scroll');
   if(sections.length) {
     const windowMetade = window.innerHeight * 0.6;
@@ -107,4 +107,4 @@ item.addEventListener('scroll', scrollAction)
     window.addEventListener('scroll', animaScroll);
   }
 }
-initAnimacaoScroll();*/
+initAnimacaoScroll();
