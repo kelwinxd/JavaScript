@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+  }
+
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    width:100%;
+    height:100%;
+    background-color: #9972bf;
+
+}
+
+.navbar > ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    display: block;
+color: white;
+width: 180px;
+height: 60px;
+text-align: center;
+padding: 20px 10px;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-left: 10px;
+}
+
+/*  so os filhos diretos de navbar*/
+.navbar ul > li a {
+    margin-right: 2px;
+}
+
+.navbar ul li .icon {
+    width: 25px;
+    display: inline-block;
+}
+
+.navbar ul li a:hover, .navbar ul li a.active {
+    background: #c279b7;
+}
+
+.navbar .dd_menu {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    display: none;
+}
+
+.navbar .dd_menu ul li a {
+    width: 180px;
+    background: #9972bf;
+    text-align: left;
+    padding: 20px;
+}
+.navbar .dd_menu ul li a:hover {
+    background: #c279b7;
+}
+
+.navbar .dd_menu::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    border: 15px solid;
+    border-color: transparent transparent #9972bf transparent;
+}
+
+
+body {
+    background-color: rgb(53, 48, 48);
+}
+
