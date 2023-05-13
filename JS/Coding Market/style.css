@@ -55,11 +55,27 @@ margin-left: 10px;
     background: #c279b7;
 }
 
+
+.navbar ul li a.parent.active + .dd_menu {
+    display: block;
+} 
+
+.navbar ul li a.sub.active + .submenu {
+    display: block;
+}
+
 .navbar .dd_menu {
     position: absolute;
     top: 80px;
     left: 20px;
     display: none;
+}
+
+.navbar .submenu ul li a {
+    width: 180px;
+    background: #9972bf;
+    text-align: left;
+    padding: 20px;
 }
 
 .navbar .dd_menu ul li a {
@@ -86,5 +102,23 @@ margin-left: 10px;
 
 body {
     background-color: rgb(53, 48, 48);
+}
+
+.submenu {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    display: none;
+}
+
+.navbar .submenu::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -10%;
+   
+    z-index: 1;
+    border: 15px solid;
+    border-color: transparent #9972bf transparent  transparent  ;
 }
 
