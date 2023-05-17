@@ -18,14 +18,14 @@ a_parent.forEach((a_item) => {
        
     })
 
+    if(a_item.classList.contains("active") ){
+          
+    }
+
 
 })
 
-document.addEventListener("click", function (e){
-    a_parent.forEach((item) => {
-       
-    })
-})
+
 
 sub.forEach((item) => {
 

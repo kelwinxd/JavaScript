@@ -25,12 +25,43 @@ const Frev = Fruits.reduceRight((acc, f) => acc + ' ' + f)
 console.log(Frev)
 
 
+//some 
+const HasGrape = Fruits.some((item) => {
+    
+    
+    return item === "Grapes"
+   
+})
+
+console.log(HasGrape, 'have?')
+
+
 //every 
 //verifica todos, se algum der false, todos são false
 
 const menor1 = numeros.every(n => n > 3)
-console.log(menor1)
+console.log(menor1 + ' Every')
 
+
+//Find 
+//Ele vai retornar apenas o primeiro item que for maior que 6
+//Para a função assim que der verdadeiro
+const hasMax = numeros.find((item) => {
+    return item > 6
+})
+
+console.log(hasMax, 'Find')
  
+
+//Filter
+
+const Biggers = numeros.filter(item => {
+    return item > 6
+})
+
+
+console.log(Biggers, 'Filter')
+
+
 
 
