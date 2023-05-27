@@ -1,0 +1,146 @@
+
+* {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    
+    height: 150px;
+    align-items: center;
+    background-color: rgb(0,0,0,.4);
+}
+.nav {
+
+    display: flex;
+    gap: 5rem;
+    margin-right: 2rem;
+}
+
+.nav li a {
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+section {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+   
+    flex-direction: column;
+    text-align: center;
+}
+
+section p {
+    color: #fff;
+    max-width: 70%;
+    margin: 50px auto;
+    
+
+}
+
+.back {
+
+    background-image: url('./back.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+.img img {
+    margin-left: 2rem;
+    width: 130px;
+    border-radius: 20px;
+}
+
+.modal-container {
+
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container.ativo {
+    display: flex;
+}
+
+@keyframes modal {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -30px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+.modal {
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 3rem 6rem;
+    border: 10px solid gray;
+    box-shadow: 0 0 10px 4px rgb(43, 42, 42);
+    position: relative;
+    height: 320px;
+    
+    
+}
+
+.ativo .modal {
+ animation: modal .5s forwards;
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(99, 7, 7);
+    color: #fff;
+    position: absolute;
+    top: -20px;
+    left: 98%;
+    cursor: pointer;
+}
+
+.modal label {
+    display: block;
+    font-weight: bold;
+    margin: 1rem;
+    text-align: center;
+}
+
+
+
+.modal input[type="submit"]{
+    display: block;
+    background-color: gray;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    display: flex;
+    margin: 15px auto 0 auto;
+    cursor: pointer;
+}

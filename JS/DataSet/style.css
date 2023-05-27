@@ -1,0 +1,26 @@
+[data-cor="blue"] {
+    background-color: red;
+    
+}
+
+[data-container] {
+    height: 200px;
+    
+}
+
+[data-anima="animation"] {
+    animation: fadein 2s infinite ease-out;
+}
+
+
+
+
+/*@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

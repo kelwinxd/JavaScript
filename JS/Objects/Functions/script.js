@@ -22,7 +22,8 @@ Seletor.prototype.active = function(classe){
     this.el.classList.add(classe)
 }
 
-//para um elemento substituir outro no Call, precisa ter propriedades parecidas
+//para um elemento substituir outro no Call, precisa ter 
+// propriedades parecidas
 
 const li = {
     el: document.querySelector('li')
@@ -60,6 +61,40 @@ const filtro = Array.prototype.filter.call(li2, function(item) {
 });
 
 console.log(filtro)
+
+
+//--------------------------- APPLY
+// Apply e Call são a mesma coisa, o que muda é que ele precisa
+//ser passado como array no parametro
+
+const nums = [45,24,78,55]
+
+console.log(Math.max.apply(null, nums))
+
+
+//---------------------- BIND
+//Cria uma nova função, mas é preciso 
+//executar a função, os outros já executam
+
+const carro = {
+  marca: 'Ford',
+  ano: 2018,
+  acelerar: function(aceleracao, tempo) {
+    return `${this.marca} acelerou ${aceleracao} em ${tempo}`;
+  }
+}
+carro.acelerar(100, 20);
+// Ford acelerou 100 em 20
+
+const honda = {
+  marca: 'Honda',
+};
+const Speedup = carro.acelerar.bind(honda, 20)
+
+console.log(Speedup(200));
+
+
+
   
 
 

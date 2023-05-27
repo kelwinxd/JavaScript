@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#div {
+    background-color: green;
+    height: 200px;
+    width: 500px;
+}
