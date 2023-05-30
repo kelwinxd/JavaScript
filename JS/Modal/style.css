@@ -17,6 +17,8 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
     
     height: 150px;
     align-items: center;
@@ -25,7 +27,7 @@ header {
 .nav {
 
     display: flex;
-    gap: 5rem;
+    gap: 4.2rem;
     margin-right: 2rem;
 }
 
@@ -33,12 +35,13 @@ header {
     font-size: 1.3rem;
     color: #fff;
     position: relative;
+    
 }
 
 section {
     border-radius: 10px;
     display: flex;
-    margin: 10px auto;
+    margin: 2rem auto;
     width: 70%;
     height: 100vh;
     background-color: rgba(37, 37, 37, 0.4);
@@ -182,4 +185,46 @@ button {
     width: 100%;
 }
 
+[data-dropmenu]{
+    position: relative;
+}
+
+[data-dropmenu] .dropmenu {
+    display: none;
+}
+[data-dropmenu]:hover .dropmenu,
+[data-dropmenu].active .dropmenu
+ 
+{
+    display: block;
+}
+
+
+.dropmenu::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -10px;
+    left: 2px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid black;
+}
+
+
+.dropmenu {
+    background:black;
+    padding: 1.5rem;
+    
+    border-radius: 5px;
+    position: absolute;
+    z-index: 200;
+    top: 32px;
+    left: 0;
+}
+
+.dropmenu li {
+    margin-bottom: 10px;
+}
 
