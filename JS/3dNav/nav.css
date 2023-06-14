@@ -23,7 +23,7 @@
 
 .link:hover {
     opacity: 0.8;
-    color: blueviolet;
+    color: #f00;
     transform: translateX(-20px);
 }
 
