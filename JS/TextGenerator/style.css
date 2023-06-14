@@ -1,0 +1,33 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.div {
+    margin-left:2rem ;
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    align-self: center;
+    font-size: 2rem;
+    color: #fff;
+  
+}
+
+.div .typed-text {
+    color: red;
+    font-weight: 600;
+}
+
+.cursor {
+    background-color: #fff;
+}
+
+
+

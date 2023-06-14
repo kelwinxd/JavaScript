@@ -1,0 +1,39 @@
+.nav-list {
+    position: absolute;
+    top: 40%;
+    right: 10vw;
+    display: none;
+    z-index: 10;
+    list-style: none;
+    font-size: 2rem;
+
+    
+}
+
+.link {
+    position: relative;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .2s;
+
+}
+
+.link:hover {
+    opacity: 0.8;
+    color: blueviolet;
+    transform: translateX(-20px);
+}
+
+.nav-list.show {
+    display: block;
+}
+
+
+@keyframes slide {
+    100% {
+        left: 100%;
+    }
+}
