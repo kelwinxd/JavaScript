@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.output button {
+    padding: 0.5rem;
+    width: 90px;
+    align-self: start;
+    color: #000;
+    
+   
+}
+
+.output {
+    display: flex;
+    position: relative;
+    
+}
+.interface {
+    margin-top: 10rem ;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    gap: 15rem;
+
+}
+
+.controller {
+    border: 1px solid gray;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 2px 0 rgb(105, 103, 103);
+}
+
+.controller form {
+    display: flex;
+    flex-direction: column;
+   height: 400px;
+   gap: 0.5rem;
+   
+}
+
+.controller form label {
+    margin-top: 1rem;
+}
+
+.controller input[type="checkbox"]{
+   appearance: none;
+   background-color: #fff;
+   width: 20px;
+   height: 20px;
+   border: 1px solid black;
+   position: relative;
+  
+}
+
+.controller input[type="checkbox"]:checked::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    position: absolute;
+    left: 0;
+}
+
+.checklist {
+    gap: 1rem;
+    display: flex;
+    
+    align-items: start;
+}
+
+#radius {
+    width: 50px;
+}
+
+.css {
+    width: 500px;
+    height: 350px;
+    border: 1px solid gray;
+    position: absolute;
+    bottom: 1rem;
+    left: -150px;
+    padding: 2rem;
+
+}
