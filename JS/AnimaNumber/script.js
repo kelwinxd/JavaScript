@@ -1,17 +1,15 @@
-const numb = document.querySelectorAll('.numb')
-
-numb.forEach((item) => {
-    const total = +item.textContent
-   
-    let start = 0
-    
-    const timer = setInterval(() => {
-        start = start + Math.floor(((10 / 100) * total))
-        item.textContent = start
-        if(start == total){
-            clearInterval(timer)
+const numeros = document.querySelectorAll('.numb');
+  
+    numeros.forEach((numero) => {
+      const total = +numero.innerText;
+      const inscremento = Math.floor(total / 10);
+      let start = 0;
+      const timer = setInterval(() => {
+        start = start + inscremento;
+        numero.innerText = start;
+        if(start > total) {
+          numero.innerText = total;
+          clearInterval(timer);
         }
-
-    }, 120);
-})
-
+      }, 150 * Math.random());
+    });

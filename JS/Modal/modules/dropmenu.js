@@ -14,4 +14,18 @@ dropMenus.forEach((menu) => {
 function handleClick(event){
     event.preventDefault()
  this.classList.toggle('active')
+ 
 }
+
+dropMenus.forEach((item) => {
+    item.addEventListener('click',outDrop)
+})
+
+function outDrop(event){
+    event.preventDefault()
+    if(event.target == this){
+        menu.classList.remove('active')
+        console.log('dsasadsa')
+    }
+}
+

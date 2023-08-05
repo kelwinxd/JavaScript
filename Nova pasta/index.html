@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+     .all {
+        max-width: 500px;
+        margin: 10rem auto;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+
+
+     }
+
+     .all button {
+        width: 200px;
+        padding: 1rem;
+     }
+    </style>
+    <div class="all">
+        <div id="content">Ola mundo</div>
+    
+        <button id="btn">Enviar Email</button>
+    </div>
+
+    <script>
+        // seu_script.js
+document.getElementById('btn').addEventListener('click', function() {
+    // Obter o valor da div para o corpo do e-mail
+    var corpoEmail = document.getElementById('content').innerText;
+
+    // Abrir o cliente de e-mail com o destinatário e corpo preenchidos
+    var destinatario = 'kelwin_esechiel@hotmail.com'; // Substitua pelo endereço de e-mail desejado
+    var assunto = 'Teste'; // Substitua pelo assunto desejado
+    var link = 'mailto:' + destinatario + '?subject=' + encodeURIComponent(assunto) + '&body=' + encodeURIComponent(corpoEmail);
+
+    window.location.href = link;
+});
+
+document.getElementById('btn').addEventListener('touch', function() {
+    // Obter o valor da div para o corpo do e-mail
+    var corpoEmail = document.getElementById('content').innerText;
+
+    // Abrir o cliente de e-mail com o destinatário e corpo preenchidos
+    var destinatario = 'kelwin_esechiel@hotmail.com'; // Substitua pelo endereço de e-mail desejado
+    var assunto = 'Teste'; // Substitua pelo assunto desejado
+    var link = 'mailto:' + destinatario + '?subject=' + encodeURIComponent(assunto) + '&body=' + encodeURIComponent(corpoEmail);
+
+    window.location.href = link;
+});
+
+    </script>
+
+
+    
+</body>
+</html>

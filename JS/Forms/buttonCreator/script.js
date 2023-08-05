@@ -1,4 +1,4 @@
-const control = document.querySelector('.controller')
+const control = document.querySelector('.controller form')
 const btn = document.querySelector('button')
 const box = document.getElementById('check')
 const cssText = document.querySelector('.css')
@@ -48,17 +48,20 @@ function saveState(name, value){
     localStorage[name] = value
 }
 
-/*function setState(){
+function setState(){
     const props = Object.keys(localStorage)
      props.forEach(propertie => {
-        console.log(control.elements.text)
+        cssBtn[propertie](localStorage[propertie])
+        control.elements[propertie].value = localStorage[propertie]
+        console.log(control.elements)
       
      })
+     showCss()
 }
 
-setState();*/
+setState();
 
-console.log(control)
+
 
 
 

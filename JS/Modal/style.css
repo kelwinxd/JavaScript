@@ -192,7 +192,7 @@ button {
 [data-dropmenu] .dropmenu {
     display: none;
 }
-[data-dropmenu]:hover .dropmenu,
+
 [data-dropmenu].active .dropmenu
  
 {
