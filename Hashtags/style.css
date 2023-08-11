@@ -1,0 +1,21 @@
+
+
+.tag-item {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: #3b507e;
+    border-radius: 5px;
+    
+  }
+
+.out {
+    background-color: black;
+   display: grid;
+   grid-template-columns: repeat(6, 60px);
+    
+}
+
+.item {
+    margin-left: 5px;
+}

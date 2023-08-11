@@ -1,0 +1,136 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212121;
+    max-height: 1000px;
+}
+
+
+
+.menuH {
+    font-size: 40px;
+    color: #fff;
+    display: none;
+}
+
+.exit {
+    display: none;
+    border: none;
+    background-color: transparent;
+    font-size:40px;
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+header {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+    position: relative;
+}
+ header ul {
+    display: flex;
+    color: #fff;
+    gap: 2rem;
+    font-size: 1.2rem;
+
+ }
+
+ header ul li a {
+    padding: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+ }
+
+ header ul li a:hover {
+    background-color: gray;
+ }
+
+ @media screen and (max-width:750px) {
+    .menuH {
+        display: block;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+
+        z-index: 10000;
+        transition: transform .4s;
+        
+    }
+
+    .exit.rot {
+        display: block;
+    }
+     .menu.dim {
+        transform: rotate(90deg);
+        background-color: pink;
+     }
+     .menuH.rot  {
+       color: transparent;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header ul {
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        right: 1px;
+        top: 70px;
+        background-color: rgb(24, 23, 23);
+        height: 92vh;
+        padding: 2rem 1rem 2rem 0;
+        display: none;
+        
+    }
+ 
+
+   
+
+    #list.active {
+        display: flex;
+        animation: fadein .4s;
+    }
+
+    .fadeout {
+        animation: fadeout .4s;
+    }
+
+    @keyframes fadein {
+        from {
+              right: -20px;
+              
+        }
+        to {
+            right: 1px;
+        }
+    }
+     
+    @keyframes fadeout {
+        from {
+              transform: translateX(0);
+              
+        }
+        to {
+            transform: translateX(-20px);
+        }
+    }
+ }
