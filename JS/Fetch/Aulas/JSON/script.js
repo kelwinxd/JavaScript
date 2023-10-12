@@ -5,6 +5,7 @@ fetch('./MOCK_DATA.json')
 .then(r => r.text()) // but now just use .json()
 .then(jsonText => {finalJson = JSON.parse(jsonText)
 console.log(finalJson)
+document.body.appendChild(finalJson.name[0])
 })
 
 //JSON.stringfy

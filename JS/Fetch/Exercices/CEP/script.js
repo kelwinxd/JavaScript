@@ -20,17 +20,12 @@ function handleFetch(event){
         .then(r => r.json()).then(r => {
             document.querySelector('#neigh').textContent = r.bairro
             document.querySelector('#local').innerText = r.localidade
-
             document.querySelector('#UF').textContent = r.uf
-            
-         
-
-        }).catch(rej => { document.querySelector('#neigh').innerText = 'CEP não encontrado'
+            }).catch(rej => { document.querySelector('#neigh').innerText = 'CEP não encontrado'
         document.querySelector('#local').innerText = "CEP não encontrado"
-
         document.querySelector('#UF').textContent = "CEP não encontrado"
-        
-    console.log(rej) })
+        console.log(rej) 
+            })
         
 
         
