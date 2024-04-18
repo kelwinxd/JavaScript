@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .div2 {
+            margin-top: 2rem;
+            width: 800px;
+        }
+
+        .box1 {
+           margin: 0 auto;
+           width: 200px;
+           text-align: center;
+           border: 1px solid gray;
+           padding: 1rem;
+           cursor: pointer;
+           
+        }
+
+        .box2 {
+            margin: 0 auto;
+            margin-top: 1rem;
+           width: 600px;
+           text-align: center;
+           border: 1px solid gray;
+           padding: 1rem;
+           display: none;
+        }
+
+        .box2.reveal {
+            display: block;
+            animation: show forwards .5s ease;
+        }
+
+        @keyframes show {
+            from {
+               opacity: 0;
+            }
+
+            to {
+                 opacity: 1;
+            }
+        }
+    </style>
+    <div class="div">
+        <h2>Input Manipulation</h2>
+        <input type="text" name="" id="">
+        <button class="button">Add</button>
+        <input type="range" name="" class="range" id="" min="2" max="50">
+    </div>
+
+    <div class="div2">
+        <div class="box1">Show More</div>
+        <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nobis nostrum ut ad, adipisci tenetur at nam, voluptate fugit suscipit repudiandae illo ab dolorem sed non quidem? Cum, maiores asperiores!</div>
+    </div>
+    
+    <script src="./dom.js"></script>
+</body>
+</html>

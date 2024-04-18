@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+    min-height: 150vh;
+}
+
+.sec1 {
+    height: 50vh;
+    background: url("./assets/egitobg.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    position: relative;
+   
+
+}
+
+.sec1 .info {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.model {
+    width: 2000px;
+    height: 1000px;
+    position: absolute;
+    top: -10vh;
+    left:15%;
+    
+    z-index: 1000;
+}
+
+.desc-egito {
+    width: 500px;
+}
+.title {
+    justify-self: flex-start;
+}
