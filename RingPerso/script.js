@@ -2,7 +2,7 @@ const Model = document.querySelector('.model');
 const modelButtons = document.querySelectorAll('.model-btn');
 const pedraButtons = document.querySelectorAll('.pedra-btn');
 const path = './imgs/';
-const names = ['ringreta','ringchanf'];
+const names = ['ringreta', 'ringchanf'];
 const End = document.querySelector('.toend');
 
 let currentModel = names[0];
@@ -46,17 +46,41 @@ pedraButtons.forEach(button => {
     });
 });
 
-function Update(some){
-    if (some == path + 'ringreta.glb'){
+function Update(some) {
+    if (some == path + 'ringreta.glb') {
         End.href = 'google.com';
     }
-    else if (some == path + 'ringretacompedra.glb'){
+    else if (some == path + 'ringretacompedra.glb') {
         End.href = 'amazon.com';
     }
-    else if (some == path + 'ringchanf.glb'){
+    else if (some == path + 'ringchanf.glb') {
         End.href = 'chanfrada';
     }
-    else if (some == path + 'ringchanfcompedra.glb'){
+    else if (some == path + 'ringchanfcompedra.glb') {
         End.href = 'chanfrada com pedra';
     }
 }
+
+const Btns = document.querySelectorAll('.btns button')
+const Cards = document.querySelectorAll('.card')
+
+function activeBtn(e){
+  document.querySelector('.active').classList.remove('active')
+  e.target.classList.add('active')
+  console.log(e.target)
+
+    Cards.forEach((card) => {
+        card.classList.add('hide')
+
+        if(card.dataset.name == e.target.dataset.name){
+            card.classList.remove('hide')
+        }
+    })
+}
+
+
+Btns.forEach((btn) => {
+    btn.addEventListener('click', activeBtn)
+})
+
+console.log(Btns)
