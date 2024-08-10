@@ -9,12 +9,16 @@
     overflow-y: hidden;
 }
 
-
+body {
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+}
 
 
 .model3d model-viewer {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 700px;
     transition: all 1s ease;
     background-color: transparent;
     
@@ -24,12 +28,61 @@
 .container {
     display: flex;
     max-width: 1100px;
-    min-width: 1000px;
+   height: 70vh;
     margin: 5rem auto;
-    gap: 1rem;
+    gap: 7rem;
     font-size: 1.2rem;
   }
 
 body {
     background-color: #212121;
+}
+
+.select {
+    padding: 1rem;
+    background-color: gray;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+.btns button {
+    width: 100px;
+    height: 50px;
+
+    background-color: gray;
+    border: none;
+    border-radius: 14px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.btns button.active {
+    background-color: #212121;
+}
+
+.models button {
+    background-color: gray;
+    border: none;
+    cursor: pointer;
+}
+
+.models button.active {
+    background-color: red;
+}
+
+.models {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
 }

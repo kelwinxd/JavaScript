@@ -16,21 +16,33 @@
         camera-controls touch-action="pan-y" camera-orbit="110deg 90deg 15m"></model-viewer>
     </div>
     <div class="select">
-        <select name="" id="" class="imgSelect">
-            <option value="ringreta">Reta</option>
-            <option value="ringchanf">Chanfrada</option>
-        </select>
-        <label for="">Sim</label>
-        <input type="radio" name="pedra" id="psim">
-        <label for="">Não</label>
-        <input type="radio" name="pedra" id="pnao" checked>
+   
+        <div class="btns">
+            <button class="active" data-name="modelo">Modelo</button>
+            <button data-name="pedra">Pedra</button>
+            <button data-name="tamanho">Tamanho</button>
+        </div>
+
+        <!-- Botões de seleção de modelos -->
+        <div class="models" data-name="modelo">
+            <button class="model-btn active" data-model="ringreta"><img src="./imgs/retamodel.png">
+            <p>Reta</p>
+            </button>
+            <button class="model-btn" data-model="ringchanf"><img src="./imgs/retamodel.png">
+                <p>Chanfrada</p>
+            </button>
+        </div>
+
+        <!-- Botões de seleção de pedra -->
+        <div class="pedra-options" data-name="pedra">
+            <button class="pedra-btn" data-pedra="sim">Sim</button>
+            <button class="pedra-btn" data-pedra="nao" class="active">Não</button>
+        </div>
 
         <a href="google.com" class="toend"><button>Fabricar</button></a>
     </div>
  
 </div>
-
-
 
 <script src="./script.js"></script>
 

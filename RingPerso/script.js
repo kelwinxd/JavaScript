@@ -1,70 +1,62 @@
-const Select = document.querySelector('.imgSelect')
-const Model = document.querySelector('.model')
-const RadioS = document.getElementById('psim')
-const RadioN = document.getElementById('pnao')
-const path = './imgs/'
-const names = ['ringreta','ringchanf','ringbal']
-const End = document.querySelector('.toend')
+const Model = document.querySelector('.model');
+const modelButtons = document.querySelectorAll('.model-btn');
+const pedraButtons = document.querySelectorAll('.pedra-btn');
+const path = './imgs/';
+const names = ['ringreta','ringchanf'];
+const End = document.querySelector('.toend');
 
-let Pedra = false
+let currentModel = names[0];
+let Pedra = false;
 
-Select.addEventListener('change', () => {
-    const value = Select.value
-   if(Pedra){
-    Model.src = path + value + 'compedra.glb'
-   }
-   else {
-Model.src = path + value + '.glb'
-   }
-
-   Update(Model.src)
-    
-})
-
-RadioS.addEventListener('change', () => {
-    console.log('mudou')
-    if(Model.src == (path + 'ringreta.glb')){
-  Model.src = path + names[0] + 'compedra.glb'
-  console.log('reta com pedra')
-  Pedra = true
-  
+// Função para atualizar o modelo
+function updateModel() {
+    let modelPath = `${path}${currentModel}`;
+    if (Pedra) {
+        modelPath += 'compedra.glb';
+    } else {
+        modelPath += '.glb';
     }
-    else if(Model.src == (path + 'ringchanf.glb')){
-        Model.src = path + names[1] + 'compedra.glb'
-        Pedra = true
-    }
-    Update(Model.src)
-
-})
-
-RadioN.addEventListener('change', () => {
-   if(Model.src == (path + 'ringretacompedra.glb') ){
-    Model.src = path + 'ringreta.glb'
-    console.log('reta sem pedra')
-    Pedra = false
-   }
-   else if (Model.src == (path + 'ringchanfcompedra.glb')){
-    Model.src = path + 'ringchanf.glb'
-    Pedra = false
-   }
-   Update(Model.src)
-})
-
-
-function Update(some){
-      if (some == path + 'ringreta.glb'){
-        End.href = 'google.com'
-      }
-      else if (some == path + 'ringretacompedra.glb'){
-        End.href = 'amazon.com'
-      }
-
-      else if (some == path + 'ringchanf.glb'){
-        End.href = 'chanfrada'
-      }
-      
-      else if (some == path + 'ringchanfcompedra.glb'){
-        End.href = 'chanfrada com pedra'
-      }
+    Model.src = modelPath;
+    Update(Model.src);
 }
 
+// Função para definir o botão ativo
+function setActiveButton(buttons, activeButton) {
+    buttons.forEach(button => {
+        button.classList.remove('active');  // Remove a classe 'active' de todos os botões
+    });
+    activeButton.classList.add('active');  // Adiciona a classe 'active' ao botão clicado
+}
+
+// Adiciona evento aos botões de modelo
+modelButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        currentModel = button.getAttribute('data-model');
+        setActiveButton(modelButtons, button); // Define o botão ativo
+        updateModel();
+    });
+});
+
+// Adiciona evento aos botões de pedra
+pedraButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        Pedra = button.getAttribute('data-pedra') === 'sim';
+        setActiveButton(pedraButtons, button); // Define o botão ativo para pedra
+        updateModel();
+    });
+});
+
+function Update(some){
+    if (some == path + 'ringreta.glb'){
+        End.href = 'google.com';
+    }
+    else if (some == path + 'ringretacompedra.glb'){
+        End.href = 'amazon.com';
+    }
+    else if (some == path + 'ringchanf.glb'){
+        End.href = 'chanfrada';
+    }
+    else if (some == path + 'ringchanfcompedra.glb'){
+        End.href = 'chanfrada com pedra';
+    }
+}
