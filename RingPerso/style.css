@@ -78,6 +78,8 @@ body {
 
 .models button.active {
     background-color: #212121;
+    border-radius: 14px;
+    padding: 0.5rem;
 }
 
 .models {
@@ -95,6 +97,8 @@ body {
 
 .pedra-btn.active {
     background-color: #212121;
+    border-radius: 14px;
+    padding: 0.5rem;
 }
 
 .card.hide {
@@ -110,4 +114,67 @@ body {
 .action {
     display: flex;
     justify-content: space-around;
+}
+
+.action button {
+    border: none;
+    
+    padding: 0.5rem 1rem;
+    border-radius: 14px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.action button:first-child {
+    background-color: gray;
+    border: 1px solid #fff;
+}
+
+#send {
+    background-color: #212121;
+    border: none;
+    padding: 0.5rem 2rem;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+     
+    .select {
+        width: 400px;
+        height: 1000px;
+    }
+   
+    
+    .btns {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .btns button {
+        font-size: 14px;
+        padding: 10px 15px;
+        width: 100%;
+    }
+
+    .models,
+    .pedra-options {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .models img,
+    .pedra-options img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .toend button {
+        font-size: 12px;
+        padding: 10px;
+    }
 }
