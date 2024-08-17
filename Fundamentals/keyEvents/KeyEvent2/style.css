@@ -1,0 +1,14 @@
+.zombie {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.zombie img {
+       width: 100%;
+}
+

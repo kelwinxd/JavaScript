@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.mybox {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    font-size: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
