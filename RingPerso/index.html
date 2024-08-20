@@ -11,6 +11,7 @@
 <body>
     
 <div class="container">
+   
     <div class="model3d">
         <model-viewer id="mod" class="model" alt="" src="./imgs/ringreta.glb" auto-rotate shadow-intensity="2"
         camera-controls touch-action="pan-y" camera-orbit="110deg 90deg 15m"></model-viewer>
@@ -25,11 +26,18 @@
 
         <!-- Botões de seleção de modelos -->
         <div class="models card" data-name="modelo">
-            <button class="model-btn active" data-model="ringreta"><img src="./imgs/retamodel.png">
-            <p>Reta</p>
+            <button class="model-btn active" data-model="ringreta">
+                <img src="./imgs/retamodel.png">
+                <p>Reta</p>
             </button>
-            <button class="model-btn" data-model="ringchanf"><img src="./imgs/retamodel.png">
+            <button class="model-btn" data-model="ringchanf">
+                <img src="./imgs/retamodel.png">
                 <p>Chanfrada</p>
+            </button>
+            <!-- Novo modelo adicionado -->
+            <button class="model-btn" data-model="tradring">
+                <img src="./imgs/retamodel.png">
+                <p>Tradicional</p>
             </button>
         </div>
 
@@ -41,6 +49,11 @@
             <button class="pedra-btn active" data-pedra="nao" ><img src="./imgs/desativado.png" alt="">
             <p>Sem Pedra</p>
             </button>
+        </div>
+
+        <div class="card hide tamanho" data-name="tamanho" >
+            <img src="./imgs/reguacerta.png" alt="">
+            <input type="range" name="" id="" min="0" max="1">
         </div>
 <div class="action">
     <a href="#"><button>Contate-nos</button></a>

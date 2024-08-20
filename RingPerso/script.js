@@ -2,10 +2,10 @@ const Model = document.querySelector('.model');
 const modelButtons = document.querySelectorAll('.model-btn');
 const pedraButtons = document.querySelectorAll('.pedra-btn');
 const path = './imgs/';
-const names = ['ringreta', 'ringchanf'];
+const names = ['ringreta', 'ringchanf', 'tradring'];  // Adicionado o novo modelo tradring
 const End = document.querySelector('.toend');
 
-let currentModel = names[0];
+let currentModel = names[0];  // Inicialmente define o modelo padrão como ringreta
 let Pedra = false;
 
 // Função para atualizar o modelo
@@ -59,28 +59,31 @@ function Update(some) {
     else if (some == path + 'ringchanfcompedra.glb') {
         End.href = 'chanfrada com pedra';
     }
+    else if (some == path + 'tradring.glb') {
+        End.href = 'tradicional';
+    }
+    else if (some == path + 'tradringcompedra.glb') {
+        End.href = 'tradicional com pedra';
+    }
 }
 
-const Btns = document.querySelectorAll('.btns button')
-const Cards = document.querySelectorAll('.card')
+// Função para alternar entre as abas de Modelo, Pedra e Tamanho
+const Btns = document.querySelectorAll('.btns button');
+const Cards = document.querySelectorAll('.card');
 
-function activeBtn(e){
-  document.querySelector('.active').classList.remove('active')
-  e.target.classList.add('active')
-  console.log(e.target)
+function activeBtn(e) {
+    document.querySelector('.active').classList.remove('active');
+    e.target.classList.add('active');
 
     Cards.forEach((card) => {
-        card.classList.add('hide')
+        card.classList.add('hide');
 
-        if(card.dataset.name == e.target.dataset.name){
-            card.classList.remove('hide')
+        if (card.dataset.name == e.target.dataset.name) {
+            card.classList.remove('hide');
         }
-    })
+    });
 }
 
-
 Btns.forEach((btn) => {
-    btn.addEventListener('click', activeBtn)
-})
-
-console.log(Btns)
+    btn.addEventListener('click', activeBtn);
+});

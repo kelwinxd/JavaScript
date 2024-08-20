@@ -137,15 +137,59 @@ body {
     padding: 0.5rem 2rem;
 }
 
+input[type="range"] {
+    width: 200px;
+    height: 20px;
+    appearance: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    height: 30px;
+    width: 30px;
+    background-color:rgb(65, 65, 65);
+    border-radius: 50%;
+   
+    cursor: pointer;
+}
+
+.tamanho {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tamanho img {
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+
+@media screen and (max-width:960px){
+    .container {
+        gap: 2rem;
+        
+    }
+}
+
 @media screen and (max-width: 700px) {
     .container {
         flex-direction: column;
         justify-content: center;
+        gap: 5rem;
+        height: 90vh;
     }
      
     .select {
         width: 400px;
-        height: 1000px;
+        height: 2000px;
+        align-self: center;
     }
    
     
@@ -169,12 +213,27 @@ body {
 
     .models img,
     .pedra-options img {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        
     }
 
-    .toend button {
-        font-size: 12px;
-        padding: 10px;
+     .action button {
+        font-size: 20px;
+       
+     }
+
+    .model3d model-viewer {
+        width: 500px;
+        height: 300px;
+        transition: all 1s ease;
+        background-color: transparent;
+        
     }
+
+    .model3d {
+        height: 2000px;
+    }
+
+    
+    
 }
