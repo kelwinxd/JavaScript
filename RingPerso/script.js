@@ -2,20 +2,30 @@ const Model = document.querySelector('.model');
 const modelButtons = document.querySelectorAll('.model-btn');
 const pedraButtons = document.querySelectorAll('.pedra-btn');
 const path = './imgs/';
-const names = ['ringreta', 'ringchanf', 'tradring'];  // Adicionado o novo modelo tradring
+const names = ['ringreta', 'ringchanf', 'tradring'];  // Modelos disponíveis
 const End = document.querySelector('.toend');
+const Range = document.getElementById('size');
 
-let currentModel = names[0];  // Inicialmente define o modelo padrão como ringreta
+let currentModel = names[0];  // Modelo inicial é "ringreta"
 let Pedra = false;
+let isThin = false;  // Flag para verificar se o modelo é a versão fina
 
 // Função para atualizar o modelo
 function updateModel() {
     let modelPath = `${path}${currentModel}`;
+    
+    // Adiciona "fina" se o range for 0
+    if (isThin) {
+        modelPath += 'fina';
+    }
+
+    // Adiciona "compedra" se a opção de pedra estiver ativa
     if (Pedra) {
         modelPath += 'compedra.glb';
     } else {
         modelPath += '.glb';
     }
+
     Model.src = modelPath;
     Update(Model.src);
 }
@@ -32,7 +42,7 @@ function setActiveButton(buttons, activeButton) {
 modelButtons.forEach(button => {
     button.addEventListener('click', () => {
         currentModel = button.getAttribute('data-model');
-        setActiveButton(modelButtons, button); // Define o botão ativo
+        setActiveButton(modelButtons, button);  // Define o botão ativo
         updateModel();
     });
 });
@@ -41,11 +51,12 @@ modelButtons.forEach(button => {
 pedraButtons.forEach(button => {
     button.addEventListener('click', () => {
         Pedra = button.getAttribute('data-pedra') === 'sim';
-        setActiveButton(pedraButtons, button); // Define o botão ativo para pedra
+        setActiveButton(pedraButtons, button);  // Define o botão ativo para pedra
         updateModel();
     });
 });
 
+// Função para atualizar o link do botão de fabricação
 function Update(some) {
     if (some == path + 'ringreta.glb') {
         End.href = 'google.com';
@@ -87,3 +98,20 @@ function activeBtn(e) {
 Btns.forEach((btn) => {
     btn.addEventListener('click', activeBtn);
 });
+
+// Adiciona evento ao controle de tamanho (range)
+Range.addEventListener('input', () => {
+    isThin = Range.value === '0';  // Verifica se o valor do range é 0
+    updateModel();
+});
+
+
+document.querySelector('.reset').addEventListener('click',() => {
+    document.location.reload()
+})
+
+const shareBtn = document.querySelector('.share')
+shareBtn.addEventListener('click', () => {
+    document.querySelector('.share-options').classList.toggle('active')
+    console.log('lclils')
+})

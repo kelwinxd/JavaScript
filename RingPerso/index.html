@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
 
     <title>Document</title>
@@ -11,10 +12,19 @@
 <body>
     
 <div class="container">
-   
+    
     <div class="model3d">
         <model-viewer id="mod" class="model" alt="" src="./imgs/ringreta.glb" auto-rotate shadow-intensity="2"
         camera-controls touch-action="pan-y" camera-orbit="110deg 90deg 15m"></model-viewer>
+        <div id="share" class="share"> <i class="fas fa-share-alt"></i>
+        <div class="share-options">
+            <button class="social-media"><i class="fab fa-whatsapp"></i></button>
+            <button class="social-media"><i class="fab fa-facebook-f"></i> </button>
+
+        </div>
+        </div>
+       
+        <button class="reset">Reset</button>
     </div>
     <div class="select">
    
@@ -53,7 +63,7 @@
 
         <div class="card hide tamanho" data-name="tamanho" >
             <img src="./imgs/reguacerta.png" alt="">
-            <input type="range" name="" id="" min="0" max="1">
+            <input type="range" name="" id="size" min="0" max="1" value="1">
         </div>
 <div class="action">
     <a href="#"><button>Contate-nos</button></a>
