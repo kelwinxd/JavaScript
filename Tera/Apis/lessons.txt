@@ -1,0 +1,18 @@
+//https://ghibliapi.herokuapp.com/films?director=${director}
+/* 
+Agora é hora de praticar o que você viu durante esta aula e brincar um pouco de consumir APIs.
+
+Utilize a api Stranger Things Quotes disponível em https://github.com/shadowoff09/strangerthings-quotes para retornar frases aleatórias da série. 
+
+Para isso, crie uma função assíncrona que consuma a API utilizando fetch. Teste seu código chamando a função e mostrando um alerta com a frase entre aspas seguida do autor. 
+
+Exemplo: "I don’t care if anyone believes me." - Joyce Byers. 
+
+O tempo estimado para esse exercício é de 15 minutos.
+
+Aproveite bem o tempo do seu exercício! Reserve um lugar silencioso e busque se concentrar unicamente na atividade, sem abrir abas que não fazem parte do seu processo de resolução. 
+
+Dica: foque no processo e não tenha medo de errar. Os erros fazem parte do processo de aprendizagem!
+
+Vamos lá?
+*/
