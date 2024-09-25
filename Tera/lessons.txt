@@ -1,0 +1,83 @@
+Lembre-se
+
+O Back-end trabalha em boa parte dos casos fazendo a ponte entre os dados que vêm do navegador rumo ao banco de dados e vice-versa, sempre aplicando as devidas regras de negócio, validações e garantias em um ambiente no qual o usuário final não tenha acesso ou possa manipular algo.
+
+A arquitetura cliente-servidor se estabelece a partir da seguinte relação: existem os fornecedores de recursos e serviços, chamados de servidores, e existem aqueles que solicitam e utilizam os recursos e serviços, denominados clientes. 
+
+O cliente realiza o envio das mensagens fazendo algum pedido ao servidor, e é sempre ele que inicia a comunicação com o servidor. Também é ele a parte que interage com a pessoa usuária e que possui a interface para enviar tarefas ao servidor, sendo chamado de front-end da aplicação.
+
+O servidor responde a mensagens solicitando a realização de alguma tarefa por parte do cliente. O servidor é back-end da aplicação, podendo oferecer serviços a muitos clientes. Os serviços podem ser realizados diretamente pelo servidor ou através de processos criados por eles para atender cada pedido do cliente, o que libera o servidor principal para receber outras solicitações.
+
+O HTTP é um protocolo de transferência que possibilita que as pessoas que inserem a URL do seu site na Web possam ter acesso aos conteúdos e dados que nele existem. 
+
+O MVC é uma sigla do termo em inglês Model (modelo) View (visão) e Controller (Controle) que facilita a troca de informações entre a interface do usuário com os dados no banco, fazendo com que as respostas sejam mais rápidas e dinâmicas. 
+
+A responsabilidade do modelo é gerenciar e controlar a forma como os dados se comportam por meio das funções, lógica e regras de negócios estabelecidas. Ele é o detentor dos dados que recebem as informações do Controller, valida se elas estão corretas ou não e envia a resposta mais adequada. 
+
+A camada de controle é responsável por intermediar as requisições enviadas pelo View com as respostas fornecidas pelo Model, processando os dados que o usuário informou e repassando para outras camadas. 
+
+A visão é responsável por apresentar as informações de forma visual ao usuário. Em seu desenvolvimento devem ser aplicados apenas recursos ligados a aparência como mensagens, botões ou telas.  
+
+Estruturas de dados são técnicas para armazenar e organizar dados. Essas técnicas tornam mais fácil modificar, navegar e acessar dados. Mais precisamente, uma estrutura de dados é uma coleção de valores de dados, os relacionamentos entre eles e as funções ou operações que podem ser aplicadas neles.
+
+Array é a estrutura de dados mais básica de todas. O array armazena dados na memória para uso posterior. Cada array possui um número fixo de células decididas em sua criação, e cada célula possui um índice numérico correspondente usado para selecionar seus dados. Array é considerado um tipo de estrutura de dados de "coleção indexada".
+
+Set é uma coleção única de tipos primitivos e objetos, onde duplicatas não são permitidas. Assim, podemos criar um conjunto vazio e adicionar objetos, ou podemos inicializar um conjunto com o conteúdo de um iterável (como um array).
+
+Uma lista encadeada é uma coleção linear de elementos, em que a ordem linear não é dada por sua localização física na memória. Em vez disso, cada elemento aponta para o próximo. 
+
+Uma fila é um tipo abstrato de dados ou coleção em que as suas entidades são mantidas em ordem. As principais (ou únicas) operações na coleção são a adição de entidades à última posição, conhecida como enfileiramento (queue), e remoção de entidades da primeira posição, conhecida como desenfileiramento (dequeue). 
+
+Uma pilha é um tipo abstrato de dados ou coleção em que as suas entidades são mantidas em ordem. As principais (ou únicas) operações na coleção são as de adição de entidades à última posição, conhecida como push, e remoção de entidades da última posição, conhecida como pop. Isso torna a pilha uma estrutura de dados Last-In-First-Out (LIFO).
+
+Uma árvore é uma estrutura de dados abstrata, amplamente utilizada, que simula uma estrutura hierárquica de árvore, com valor raíz e sub-árvores de filhos com um nó pai que é representado como um conjunto de nós conectados.
+
+Uma estrutura de dados em árvore pode ser definida recursivamente como uma coleção de nós (começando no nó raiz), onde cada nó é uma estrutura de dados consistindo de um valor, junto com uma lista de referências a outros nós (os "filhos"), com as restrições de que nenhuma referência é duplicada e nenhuma aponta para a raiz.
+
+Node.Js é uma plataforma de execução de Javascript, construída em cima do motor V8 do Google Chrome. 
+
+NPM é um registro de pacotes que consiste de três componentes distintos:
+
+Um site para descobrir pacotes;
+
+Uma interface de linha de comando para interagir com esse registro;
+
+O registro em si.
+
+O Express é uma biblioteca que implementa métodos que gerenciam o módulo HTTP e fornecem soluções para criar um servidor. 
+
+REST (em português, significa “Transferência de Estado Representacional”) é uma arquitetura de software muito utilizada na implementação de APIs. 
+
+Existem quatro operações fundamentais que você pode aplicar em cima de alguma informação: Criar, Ler, Atualizar e Deletar. Esse é o famoso CRUD, do inglês Create, Read, Update, Delete.
+
+O Controlador é a parte responsável pela gestão da lógica do nosso código. Cada entidade vai ter um controlador, dessa maneira, se eu quiser adicionar ou modificar alguma coisa no usuário, por exemplo, basta abrir o controlador de usuários. Todas as funções relacionadas ao usuário ficarão lá.
+
+O roteador funciona de uma maneira bem simples. Quando a requisição chega na nossa aplicação, ela entra no roteador e a partir daí ela decide para qual controlador enviar.
+
+A função passada para o new Promise é chamada executor. Seus argumentos resolve e reject, são callbacks fornecidos pelo próprio JavaScript. 
+
+Um objeto Promise serve como um link entre o executor e as funções de consumo, que receberão o resultado ou o erro. Neste caso, funções de consumo podem ser "registradas" (subscribed) com os métodos .then, .catch e .finally.
+
+Ajax significa Asynchronous Javascript And Xml. Ajax é apenas um meio de carregar dados do servidor e atualizar seletivamente partes de uma página da web sem recarregar a página inteira.
+
+Basicamente, o que o Ajax faz é usar o objeto XMLHttpRequest (XHR) interno do navegador para enviar e receber informações de e para um servidor web de forma assíncrona, mas em segundo plano, sem bloquear a página ou interferir na experiência da pessoa usuária. 
+
+A palavra "async" antes de uma função, torna possível que esta mesma função sempre retorne uma “promise”. Assim, valores retornados são encapsulados em uma promise e resolvida automaticamente.
+
+A palavra-chave await só funciona dentro de funções assíncronas, e faz com que o JavaScript espere até que a promise seja resolvida e retorne seu resultado.
+
+Os bancos de dados de documentos são considerados bancos de dados não relacionais (ou NoSQL). Em vez de armazenar dados em linhas e colunas fixas, os bancos de dados de documentos usam documentos flexíveis. Os bancos de dados de documentos são a alternativa mais popular aos bancos de dados relacionais tabulares.
+
+Um documento é um registro em um banco de dados de documentos. Um documento normalmente armazena informações sobre um objeto e seus metadados relacionados.
+
+Os documentos armazenam dados em pares de campo-valor. E os valores podem ser uma variedade de tipos e estruturas, incluindo strings, números, datas, matrizes ou objetos. Os documentos podem ser armazenados em formatos como JSON, BSON e XML.
+
+Mongoose é uma biblioteca Object Data Modeling (ODM) para MongoDB e Node.js. Ele gerencia relacionamentos entre dados, fornece validação de esquema e é usado para traduzir objetos no código, bem como a representação desses objetos no MongoDB.
+
+A autenticação garante que o usuário é quem diz ser, já a autorização garante a segurança interna do sistema, dando acesso a recursos apenas para quem é devido.
+
+As criptografias podem ser divididas em simétricas e assimétricas, de acordo com os métodos de criptografia de dados usados ​​nas redes e computadores atuais. 
+
+A criptografia simétrica é um tipo de criptografia em que se usa a mesma chave para criptografar e descriptografar as mesmas informações. Isso significa que as mesmas informações são exigidas ou usadas durante o processo de criptografia e descriptografia.
+
+Na criptografia assimétrica são necessárias duas chaves, uma das chaves será privada e deverá ser guardada para si mesmo, e não compartilhada com outras pessoas, a outra será uma chave pública, que pode ser dada a todos.

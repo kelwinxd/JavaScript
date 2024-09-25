@@ -1,0 +1,37 @@
+// No terminal, instalar bcrypt.js
+npm install bcrypt
+
+// No projeto, no arquivo app.js
+const bcrypt = require('bcryptjs');
+
+const password = '123456';
+
+const salt1 = bcrypt.genSaltSync();
+const pwdHash1 = bcrypt.hashSync(password, salt1);
+console.log(`Hash 1 ${pwdHash1}`);
+const verified1 = bcrypt.compareSync('123456', pwdHash1);
+console.log(`Hash 1 verified ${verified1}`);
+
+const salt2 = bcrypt.genSaltSync();
+const pwdHash2 = bcrypt.hashSync(password, salt2);
+console.log(`Hash 1 ${pwdHash2}`);
+const verified2 = bcrypt.compareSync('123456', pwdHash2);
+console.log(`Hash 2 verified ${verified2}`);
+
+VAMOS PRATICAR
+
+Somos constantemente identificados, autenticados e autorizados por vários sistemas. Agora chegou a hora de você ser o responsável por esse processo em uma aplicação, e praticar um pouco o que você viu durante esta aula.
+
+Para que você coloque a mão na massa, complete as seguintes missões:
+
+Crie um projeto usando o MEN Stack, no banco deve haver uma coleção para usuários. A coleção deve ter os atributos: nome, e-mail e senha. 
+
+Crie duas rotas, uma para criação de usuário e outra para autenticação. Implemente a criação do usuário com senha criptografada (não é necessário salvar o salt) e a autenticação do usuário, recebendo e-mail e senha.
+
+O tempo estimado para esse exercício é de 45 minutos.
+
+Aproveite bem o tempo do seu exercício! Reserve um lugar silencioso e busque se concentrar unicamente na atividade, sem abrir abas que não fazem parte do seu processo de resolução. 
+
+Foque no processo e não tenha medo de errar. Os erros fazem parte do processo de aprendizagem!
+
+Vamos lá?

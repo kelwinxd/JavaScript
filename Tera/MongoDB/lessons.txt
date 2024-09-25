@@ -41,3 +41,112 @@ db.NOME_COLECAO.save({_id:ObjectId(),NEW_DATA})
 
 // Excluir documento
 db.NOME_COLECAO.remove(DELLETION_CRITTERIA)
+
+mongodb://localhost:27017/
+
+// Operações
+
+const author = new AuthorModel({
+  name: 'Cacilda de Amaral',
+  gender: ['Comédia', 'Romance']
+})
+
+author.save()
+   .then(doc => {
+     console.log(doc)
+   })
+   .catch(err => {
+     console.error(err)
+   });
+
+AuthorModel
+  .find({
+    name: 'Cacilda de Amaral'
+  })
+  .then(doc => {
+    console.log(doc)
+  })
+  .catch(err => {
+    console.error(err)
+  });
+
+AuthorModel
+  .findOneAndUpdate(
+    {
+      name: 'Cacilda de Amaral'
+    }, 
+    {
+      birth_date: '1958-06-30'
+    },
+    {
+      new: true, // return updated doc
+      runValidators: true // validate before update
+    })
+  .then(doc => {
+    console.log(doc)
+  })
+  .catch(err => {
+    console.error(err)
+  });
+
+AuthorModel
+  .findOneAndRemove({
+    name: 'Cacilda de Amaral'
+  })
+  .then(response => {
+    console.log(response)
+  })
+  .catch(err => {
+    console.error(err)
+  })
+
+  exercice:
+  1ª parte: 
+
+Vamos criar uma base de dados para o novo empreendimento da cidade, o Tera Burger, que deve conter as seguintes coleções:
+
+Itens (do menu), contendo nome do item, descrição, valor unitário, categoria e disponibilidade (booleano).
+
+Pedidos, contendo número da mesa, uma lista de itens pedidos e quantidade, status (em andamento, encerrado).
+
+Cabe a você decidir o melhor nome e tipo para as propriedades, caso não seja especificado. 
+
+Sinta-se à vontade para inserir dados e fazer consultas. No entanto, o produto final desse exercício é a estrutura da base de dados Tera Burger.
+
+2ª Parte: 
+
+Vamos utilizar o Mongoose para facilitar as operações comerciais do Tera Burger. Primeiro, é necessário criar um projeto, instalar o Mongoose e criar schemas para cada coleção. 
+
+Para isso, certifique-se de criar os schemas em um pasta chamada model, isso irá facilitar a execução de próximas atividades e seu projeto ficará mais organizado. 
+
+Como desafio extra, tente criar um script de migração, ou seja, um arquivo que, ao ser executado, abra uma conexão com o banco e execute operações nele. 
+
+No caso deste script de migração, você deve apagar todos os documentos existentes em suas coleções e inserir 10 documentos na coleção de itens de menu.
+
+3ª Parte: 
+
+E por fim, chegou a hora de utilizar o Express para disponibilizar as rotas que serão chamadas no app disponível para os clientes em cada mesa do Tera Burger. As seguintes rotas devem ser criadas:
+
+/items
+
+GET /items?category=:category (Obter todos os itens disponíveis do menu, e caso possua a query de categoria, filtrar por categoria).
+
+GET /items/:id (Obter um item por id, se o item não estiver disponível retornar um erro amigável).
+
+/orders
+
+GET /orders/:numeroMesa (Nesta rota, só devem retornar os pedidos da mesa que estão em aberto).
+
+POST /orders (Só deve ser criado um novo pedido se não houver pedido em aberto para a mesa. Os itens inseridos tem que estar disponíveis no menu).
+
+PUT /orders/:numeroMesa (Apenas adicionar novos itens ou incrementar a quantidade de um item já pedido, isso só pode ser feito se houver um pedido em aberto para mesa).
+
+Em todos os possíveis caso de exceção, como consultar um item indisponível, adicionar um item indisponível a um pedido, ou criar um novo pedido para uma mesa que já tem pedido em aberto, o usuário deve receber um erro amigável.
+
+O tempo estimado para esse exercício é de 1 hora e 40 minutos.
+
+Aproveite bem o tempo do seu exercício! Reserve um lugar silencioso e busque se concentrar unicamente na atividade, sem abrir abas que não fazem parte do seu processo de resolução. 
+
+Dica: foque no processo e não tenha medo de errar. Os erros fazem parte do processo de aprendizagem!
+
+Vamos lá?
