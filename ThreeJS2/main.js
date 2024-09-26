@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const canvas = document.getElementById('canvas')
 const renderer = new THREE.WebGLRenderer({
@@ -10,10 +11,29 @@ renderer.setSize(window.innerWidth, window.innerHeight) //define o tamanho do re
 renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1)//renderize com mais qualidade para dispositivos com alta resoluçao e mantenha o padrão para devices normais
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 1000 );
 camera.position.set(-1,3,7)
 scene.add(camera)
 
+const boxMesh = new THREE.Mesh(
+	new THREE.BoxGeometry(2,2,2),
+	new THREE.MeshBasicMaterial({color:'firebrick'})
+
+)
+scene.add(boxMesh)
+
+const loader = new GLTFLoader();
+loader.load('./deadpool.glb', (gltf) => {
+  const model = gltf.scene;
+  scene.add(model);
+
+  // Ajustar a posição do modelo, se necessário
+  model.position.set(-1, 3, 7); // Altere conforme necessário
+}, undefined, (error) => {
+  console.error('Erro ao carregar o modelo:', error);
+});
+
+//draw
 renderer.render(scene, camera)
 
 /*
