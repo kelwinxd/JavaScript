@@ -22,16 +22,19 @@ const boxMesh = new THREE.Mesh(
 )
 scene.add(boxMesh)
 
-const loader = new GLTFLoader();
-loader.load('./deadpool.glb', (gltf) => {
-  const model = gltf.scene;
-  scene.add(model);
 
-  // Ajustar a posição do modelo, se necessário
-  model.position.set(-1, 3, 7); // Altere conforme necessário
-}, undefined, (error) => {
-  console.error('Erro ao carregar o modelo:', error);
-});
+
+const loader = new GLTFLoader();
+
+function loadModels(src) {
+    loader.load(src , function ( gltf ) {
+	    scene.add( gltf.scene );
+    }, undefined, function ( error ) {
+        console.error( error );
+    });
+}
+
+loadModels('./deadpool.glb');
 
 //draw
 renderer.render(scene, camera)
