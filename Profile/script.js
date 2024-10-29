@@ -48,6 +48,7 @@
         console.log('Projects')
         changeModelAndColor('projects', './ship.glb');
         InfoDivs[1].classList.add('active')
+        
           bgVideo.style.left = '40%'
              bgVideo.style.top = '50%'
     });
