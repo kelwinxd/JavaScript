@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.hero-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15rem;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #181818, #6d6d6d);
+    position: relative;
+    overflow: hidden;
+}
+
+.second-section {
+    height: 90vh;
+    background-image: linear-gradient(135deg, #747474, #020202);
+    padding: 15rem;
+}
+
+.content {
+    max-width: 500px;
+    z-index: 2;
+}
+
+.logo {
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #f1c40f;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background-color: #0be22f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+   
+}
+
+.cta-button:hover {
+    background-color: #53d15e;
+}
+
+.whatsapp-link {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.whatsapp-link img {
+    width: 60px;
+}
+
+.astronaut {
+    position: absolute;
+    right: 24%; 
+    top: 10%;
+    max-width: 600px;
+}
+
+.astronaut img {
+    width: 100%;
+    z-index: -1;
+    /*animation: float 4s infinite ease-in-out;*/
+}
+/*
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+*/
+
+@media (min-width: 1500px){
+    .astronaut img {
+        width: 150%;
+    }
+
+    .astronaut {
+        right: 30%;
+        
+    }
+}
+
+@media (min-width: 1001px) {
+    .astronaut img {
+        width: 150%;
+    }
+
+    .astronaut {
+        right: 30%;
+        top: 20%;
+    }
+}
+
+/* Media Query para Responsividade */
+@media (max-width: 1300px) {
+    .hero-section {
+        padding: 5rem;
+    }
+
+    .astronaut {
+        max-width: 400px;
+        right: 5%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 3rem;
+        
+        height: 90vh;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .content {
+        max-width: 60%;
+        
+        display: flex;
+        flex-direction: column;
+        
+      
+    }
+
+    .content-internal {
+        display: flex;
+      
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .content h1 {
+        font-size: 18px;
+    }
+
+    .content-internal {
+        margin-top: 15rem;
+    }
+    .titles h1 {
+        font-size: 1.6rem;
+    }
+   
+    p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 15px;
+        width: 70%;
+    }
+
+    .astronaut {
+        position: absolute;
+      
+        margin-top: 5rem;
+       
+        max-width: 500px; 
+    }
+
+    .astronaut img {
+        width: 130%;
+    }
+}
+
+@media (max-width:500px) {
+    .astronaut {
+        position: absolute;
+        right: -20%;
+        margin-top: 11rem;
+       
+        max-width: 500px; 
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .titles h1 {
+        font-size: 1.3rem;
+    }
+
+    .astronaut img {
+        width: 100%;
+    }
+
+    .cta-button {
+        width: 110%;
+    }
+}
+
+@media (max-width:375px){
+    .content-internal {
+        gap: 1rem;
+        margin-top: 12rem;
+    }
+
+    .cta-button {
+        padding: 10px 6px;
+        width: 100%;
+    }
+}
