@@ -99,7 +99,7 @@ img{
     &__menu {
         @media screen and (max-width:768px) {
             position: fixed;
-            top: $header-height;
+            top: -100%;
             left: 0;
             background-color: #fff;
             width: 100%;
@@ -123,6 +123,157 @@ img{
 
         &:hover {
             color: var(--second-color);
+        }
+    
+    }
+
+    &__logo {
+        color: var(--first-color);
+        font-weight: bold;
+    }
+    &__toggle {
+      display: inline;
+      cursor: pointer;
+      margin-right: 1rem;
+
+      & img {
+        width: 1.8rem;
+      }
+    }
+    &__btn {
+        background-color: var(--second-color);
+        color: #fff;
+        padding: 7px 1rem;
+        border-radius: 32px;
+    }
+}
+
+/* Show Menu*/
+
+.show {
+    top: $header-height;
+}
+
+/*Home */
+
+.home {
+    height: calc(100vh - #{$header-height});
+    display: grid;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    grid-template-areas: "data" "img" "scroll";
+    row-gap: 1.5rem;
+
+    &__data {
+        grid-area: data;
+        padding-top: 3rem;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: var(--biggest-font-size);
+        font-weight: $font-regular;
+        margin-bottom: 1.5rem;
+    }
+
+    &__description {
+        font-size: var(--body-font);
+        padding: 0 1rem;
+    }
+    &__img {
+        grid-area: img;
+        display: flex;
+        justify-content: center;
+
+        & img {
+            width: 81px;
+            height: 177px;
+        }
+       
+    }
+
+    &__scroll {
+        grid-area:scroll;
+        text-align: center;
+        align-self: center;
+        
+        &-text {
+            display: block;
+            font-size: .9rem;
+            margin-bottom: 1rem;
+        }
+
+        &-icon {
+            width: 2rem;
+        }
+    }
+}
+
+/* Animation */
+
+.airpod1 {
+    animation: airpod1 3s infinite;
+
+    @keyframes airpod1 {
+        50% {
+            transform: translateY(-6%);
+        }
+    }
+}
+
+.airpod2 {
+    animation: airpod2 3s infinite;
+
+    @keyframes airpod2 {
+        50% {
+            transform: translateY(6%);
+        }
+    }
+}
+
+/* Details */
+
+.details {
+    height: calc(100vh - #{$header-height});
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    align-items: center;
+
+    &__box {
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    &__initial {
+        font-size: var(--smaller-font-size);
+    }
+
+    &__title {
+        font-size: var(--bigger-font-size);
+        font-weight: $font-regular;
+
+        & span {
+            font-size: var(--big-font-size);
+        }
+    }
+
+    &__img {
+        width: max-content;
+        align-self: center;
+
+        & img {
+            width: 218px;
+        }
+    }
+}
+
+/* Animation 2 */ 
+.airpods {
+    animation: airpods 3s infinite;
+
+    @keyframes airpods {
+        50% {
+            transform: translateY(-6%);
         }
     }
 }
